@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SignLearn</string>
+    <string name="tagline">Learn American Sign Language one sign at a time</string>
+    <string name="sdg_note">Supports UN SDG 4 (Quality Education) and SDG 10 (Reduced Inequalities) by making sign language easier to learn.</string>
 </resources>

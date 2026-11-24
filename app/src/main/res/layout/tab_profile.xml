@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_avatar"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    style="@style/Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learner" />
+
+                <TextView
+                    android:id="@+id/tvProfileLevel"
+                    style="@style/Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level 1 · 0 XP" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Stats 2x2 -->
+        <TextView
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Statistics" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStatStreak"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="🔥 0\nDay streak"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStatXp"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="⭐ 0\nTotal XP"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStatLessons"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="📚 0\nLessons"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStatCamera"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="📷 0\nCamera signs"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Badges -->
+        <TextView
+            android:id="@+id/tvBadgesTitle"
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Badges" />
+
+        <LinearLayout
+            android:id="@+id/badgeGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+
+        <!-- Settings -->
+        <TextView
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Settings" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔔  Daily streak reminder"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvReminderTime"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="⏰  Remind me at 7:00 PM  (tap to change)"
+                android:textColor="@color/primary"
+                android:textSize="15sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchSound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔊  Sound effects"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnTestReminder"
+            style="@style/ChunkyButton.Small.White"
+            android:layout_width="match_parent"
+            android:layout_marginTop="14dp"
+            android:text="🔔  Send a test reminder" />
+
+        <TextView
+            android:id="@+id/btnShare"
+            style="@style/ChunkyButton.Small"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="📤  Share my progress" />
+
+        <TextView
+            android:id="@+id/btnLearnMore"
+            style="@style/ChunkyButton.Small.White"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="🌐  Learn more about ASL" />
+
+        <TextView
+            android:id="@+id/btnEditName"
+            style="@style/ChunkyButton.Small.White"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="✏️  Edit name" />
+
+        <TextView
+            android:id="@+id/btnReset"
+            style="@style/ChunkyButton.Small.White"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="♻️  Reset progress"
+            android:textColor="@color/red" />
+    </LinearLayout>
+</ScrollView>

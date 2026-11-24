@@ -1,9 +1,90 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SignLearn" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Always a bright, light look (also in phone dark mode) so the app keeps its colors. -->
+    <style name="Base.Theme.SignLearn" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_muted</item>
     </style>
 
     <style name="Theme.SignLearn" parent="Base.Theme.SignLearn" />
+
+    <!-- Camera screen: black background behind the preview -->
+    <style name="Theme.SignLearn.Camera" parent="Base.Theme.SignLearn">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:colorBackground">@color/black</item>
+    </style>
+
+    <!-- Chunky "3D" button made from a TextView (works with any background drawable). -->
+    <style name="ChunkyButton">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/btn_primary</item>
+    </style>
+
+    <style name="ChunkyButton.Green">
+        <item name="android:background">@drawable/btn_green</item>
+    </style>
+
+    <style name="ChunkyButton.White">
+        <item name="android:background">@drawable/btn_white</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="ChunkyButton.Small">
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ChunkyButton.Small.White">
+        <item name="android:background">@drawable/btn_white</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="Heading">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="Body">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="Muted">
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="StatPill">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:background">@drawable/bg_pill</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
 </resources>

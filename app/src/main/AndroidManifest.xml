@@ -1,11 +1,14 @@
-
-g<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Camera: used by the "Sign It!" practice that checks your hand sign -->
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <!-- Needed to show notifications on Android 13+ -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- Implicit intents the app uses to talk to other apps -->
+    <!-- Implicit intents the app sends to other apps (share + open website) -->
     <queries>
         <intent>
             <action android:name="android.intent.action.SEND" />
@@ -25,20 +28,33 @@ g<?xml version="1.0" encoding="utf-8"?>
         android:supportsRtl="true"
         android:theme="@style/Theme.SignLearn">
 
-        <activity android:name=".ProgressActivity" android:exported="false" />
-        <activity android:name=".QuizActivity" android:exported="false" />
-        <activity android:name=".LessonActivity" android:exported="false" />
-
+        <!-- Launcher: welcome / profile setup screen -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- No service/receiver needed: nothing runs on startup. -->
+        <!-- Main dashboard (Learn / Practice / Profile tabs) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".LessonActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".LessonCompleteActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".CameraActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".DictionaryActivity" android:exported="false" android:screenOrientation="portrait" />
+
+        <!-- Receives the daily alarm and posts the streak-reminder notification.
+             Not exported: only our own AlarmManager PendingIntent can trigger it. -->
+        <receiver android:name=".ReminderReceiver" android:exported="false" />
+
     </application>
 
 </manifest>

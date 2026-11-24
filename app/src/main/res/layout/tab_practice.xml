@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollPractice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Practice" />
+
+        <TextView
+            style="@style/Muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use your camera — the app checks your hand sign!" />
+
+        <!-- Free practice -->
+        <LinearLayout
+            android:id="@+id/cardFree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="📷 Sign It!"
+                android:textSize="19sp" />
+
+            <TextView
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick a sign, then show it to the camera and hold it." />
+
+            <LinearLayout
+                android:id="@+id/letterGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <!-- Speed round -->
+        <LinearLayout
+            android:id="@+id/cardSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="⚡ Speed Round"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvSpeedBest"
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign as many letters as you can in 60 seconds. Best: 0" />
+
+            <TextView
+                android:id="@+id/btnSpeed"
+                style="@style/ChunkyButton.Small"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_orange"
+                android:text="Start speed round" />
+        </LinearLayout>
+
+        <!-- Spell a word -->
+        <LinearLayout
+            android:id="@+id/cardSpell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="✍️ Spell a Word"
+                android:textSize="19sp" />
+
+            <TextView
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fingerspell a random word letter by letter." />
+
+            <TextView
+                android:id="@+id/btnSpell"
+                style="@style/ChunkyButton.Small"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_blue"
+                android:text="Give me a word" />
+        </LinearLayout>
+
+        <!-- Dictionary -->
+        <LinearLayout
+            android:id="@+id/cardDictionary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="📖 Sign Dictionary"
+                android:textSize="19sp" />
+
+            <TextView
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Look up every sign in the course." />
+
+            <TextView
+                android:id="@+id/btnDictionary"
+                style="@style/ChunkyButton.Small.White"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="Open dictionary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHeartInfo"
+            style="@style/Muted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="❤️ Every 5 correct camera signs earns you a heart!" />
+    </LinearLayout>
+</ScrollView>

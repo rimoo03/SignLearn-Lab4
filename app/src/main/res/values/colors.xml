@@ -2,4 +2,47 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand -->
+    <color name="primary">#7C4DFF</color>
+    <color name="primary_dark">#5B32D6</color>
+    <color name="primary_light">#EDE7FF</color>
+
+    <color name="green">#2BC48A</color>
+    <color name="green_dark">#1E9E6E</color>
+    <color name="green_light">#DDF8EC</color>
+
+    <color name="red">#FF4B4B</color>
+    <color name="red_dark">#D93636</color>
+    <color name="red_light">#FFE3E3</color>
+
+    <color name="yellow">#FFC800</color>
+    <color name="yellow_dark">#E0A800</color>
+    <color name="yellow_light">#FFF5CC</color>
+
+    <color name="orange">#FF9600</color>
+    <color name="orange_dark">#E07B00</color>
+
+    <color name="blue">#1CB0F6</color>
+    <color name="blue_dark">#1489C2</color>
+    <color name="blue_light">#DDF3FE</color>
+
+    <color name="pink">#FF6FB1</color>
+    <color name="pink_dark">#E0478F</color>
+
+    <!-- Neutrals -->
+    <color name="bg">#F6F5FB</color>
+    <color name="card">#FFFFFF</color>
+    <color name="border">#E5E5EF</color>
+    <color name="border_dark">#CFCFDC</color>
+    <color name="text">#2B2B3A</color>
+    <color name="text_muted">#7A7A90</color>
+    <color name="locked">#DCDCE6</color>
+    <color name="locked_dark">#B9B9C8</color>
+    <color name="scrim">#99000000</color>
+
+    <!-- Hand drawing -->
+    <color name="skin">#FFD9B8</color>
+    <color name="skin_shade">#F0BE96</color>
+    <color name="skin_line">#9C6644</color>
 </resources>
