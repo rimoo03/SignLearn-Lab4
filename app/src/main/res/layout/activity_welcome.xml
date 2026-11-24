@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <com.example.signlearn.HandSignView
+                android:id="@+id/handWave"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvAppName"
+                style="@style/Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/app_name"
+                android:textColor="@color/primary"
+                android:textSize="40sp" />
+
+            <TextView
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tagline"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/cardSetup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="What should we call you?" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="name"
+                    android:background="@drawable/bg_input"
+                    android:hint="Your name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLength="20"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    style="@style/Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Pick a daily goal" />
+
+                <TextView
+                    android:id="@+id/goalCasual"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/opt_default"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="4dp"
+                    android:text="🐢   Casual  ·  20 XP a day"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goalRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/opt_default"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="4dp"
+                    android:text="🚶   Regular  ·  30 XP a day"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goalSerious"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/opt_default"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="4dp"
+                    android:text="🚀   Serious  ·  50 XP a day"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnStart"
+                style="@style/ChunkyButton.Green"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="Let's go!" />
+
+            <TextView
+                style="@style/Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/sdg_note"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.example.signlearn.ConfettiView
+        android:id="@+id/confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
